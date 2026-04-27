@@ -94,13 +94,7 @@ npm run dev
 
 Frontend: `http://localhost:5173`
 
-## Mobile Usage Note
 
-The frontend API base uses your current host automatically:
-
-`http(s)://<your-hostname>:4000`
-
-So if your phone opens frontend via LAN IP, API calls target your PC IP too.
 
 ## What I Would Improve Next
 
