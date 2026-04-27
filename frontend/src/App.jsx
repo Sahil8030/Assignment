@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
-const API_BASE = `${window.location.protocol}//${window.location.hostname}:4000`;
+const API_BASE = "https://assignment-rf03.onrender.com";
 
 function App() {
   const [files, setFiles] = useState([]);
