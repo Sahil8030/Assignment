@@ -5,6 +5,13 @@ const multer = require("multer");
 const app = express();
 const PORT = 4000;
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://127.0.0.1:5173",
+  "https://assignment-rf03.onrender.com",
+  process.env.FRONTEND_ORIGIN,
+].filter(Boolean);
+
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
@@ -13,7 +20,16 @@ const upload = multer({
   },
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error("Not allowed by CORS"));
+    },
+  }),
+);
 app.use(express.json());
 app.use((_, res, next) => {
   res.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
