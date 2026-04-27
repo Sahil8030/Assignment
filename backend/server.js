@@ -8,7 +8,7 @@ const PORT = 4000;
 const allowedOrigins = [
   "http://localhost:5173",
   "http://127.0.0.1:5173",
-  "https://assignment-rf03.onrender.com",
+  "https://assignment-ruby-tau.vercel.app",
   process.env.FRONTEND_ORIGIN,
 ].filter(Boolean);
 
