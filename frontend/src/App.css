@@ -1,0 +1,190 @@
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.header {
+  margin-bottom: 18px;
+}
+
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 1.9rem;
+}
+
+.header p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+textarea,
+input,
+button,
+select {
+  font: inherit;
+}
+
+textarea,
+input[type="number"],
+input[type="text"],
+input[type="file"],
+select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: #fff;
+}
+
+textarea {
+  min-height: 84px;
+  resize: vertical;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #1d4ed8;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.primary-btn {
+  margin-bottom: 0;
+}
+
+.action-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin: 0 0 6px;
+  color: #374151;
+}
+
+.subheading {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.photos-list {
+  display: grid;
+  gap: 10px;
+}
+
+.photo-card {
+  border: 1px solid #dbe1ea;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.photos-list .photo-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+}
+
+.photos-list .photo-card img,
+.photos-list .placeholder {
+  height: 100%;
+  min-height: 120px;
+}
+
+.photo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  font-size: 0.92rem;
+}
+
+.placeholder {
+  height: 170px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  color: #334155;
+  background: linear-gradient(135deg, #dbeafe, #e2e8f0);
+}
+
+.empty {
+  margin: 0;
+  color: #475569;
+}
+
+pre {
+  margin: 0;
+  max-height: 340px;
+  overflow: auto;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 12px;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 900px) {
+  .controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photos-list .photo-card {
+    grid-template-columns: 1fr;
+  }
+}
